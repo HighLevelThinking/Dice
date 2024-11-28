@@ -9,6 +9,8 @@ class Die:
         self.faces = faces
         self.last_roll = 1
     def roll(self) -> int:
-        roll = random.choice(self.faces)
+        roll = random.choice(self.faces).value
         self.last_roll = roll
         return roll
+    
+STANDARD_DIE = Die([Die_face(1),Die_face(2),Die_face(3),Die_face(4),Die_face(5),Die_face(6)])
